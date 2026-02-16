@@ -10,9 +10,12 @@
 
     <!-- GOOGLE FONT -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Gravitas+One&display=swap" rel="stylesheet">
-<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Gravitas+One&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
+    
+    <!-- FONT AWESOME FOR ICONS -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 </head>
 
 <body>
@@ -34,66 +37,271 @@
 <!-- MAIN CONTENT -->
 <main class="content">
 
-    <!-- HOME -->
-    <section id="home" class="page active">
+<!-- HOME -->
+<section id="home" class="page active">
 
-    <!-- BACKGROUND DESIGN -->
     <div class="background-image">
-        <!-- 👉 Put your design image here -->
         <img src="images/background.png" alt="Background Design">
     </div>
 
     <div class="hero">
-
         <div class="hero-text">
-            <h1>Hello, I’m <span>Ervie</span><br>Obedencio</h1>
+            <h1>Hello, I'm <span>Ervie</span><br>BSIT 3RD YEAR</h1>
             <p>
                 I am a passionate aspiring developer focused on building clean, minimal,
                 and user-friendly digital interfaces.
             </p>
-            <button>View Projects</button>
+            <!-- UPDATED BUTTON - Added onclick to go to About section -->
+            <button onclick="showSection('about')">About Me</button>
         </div>
 
         <div class="hero-image">
             <img src="images/profile.jpg" alt="Profile Picture">
         </div>
-
     </div>
 
 </section>
 
-    <!-- ABOUT -->
-    <section id="about" class="page">
+
+<!-- ABOUT -->
+<section id="about" class="page about-page">
 
     <div class="background-image">
-        <!-- 👉 Put your design image here -->
         <img src="images/background.png" alt="Background Design">
     </div>
 
+    <!-- Added a container with scrollable content -->
+    <div class="about-content-wrapper">
+        <div class="about-container">
+            <!-- Left Column: Profile and Personal Info -->
+            <div class="about-left">
+                <img src="images/profile.jpg" alt="Ervie Obedencio" class="profile-image-large">
+                
+                <div class="personal-info">
+                    <div class="info-item">
+                        <i class="fas fa-user"></i>
+                        <span>Name:</span> Ervie Obedencio
+                    </div>
+                    <div class="info-item">
+                        <i class="fas fa-birthday-cake"></i>
+                        <span>Age:</span> 20 years old
+                    </div>
+                    <div class="info-item">
+                        <i class="fas fa-map-marker-alt"></i>
+                        <span>Location:</span> Philippines
+                    </div>
+                    <div class="info-item">
+                        <i class="fas fa-graduation-cap"></i>
+                        <span>Education:</span> BSIT 3rd Year
+                    </div>
+                    <div class="info-item">
+                        <i class="fas fa-envelope"></i>
+                        <span>Email:</span> obedencioervie@gmail.com
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Right Column: Detailed Information -->
+            <div class="about-right">
+                <h1 class="section-title">About <span style="color: orange;">Me</span></h1>
+                
+                <!-- Introduction Section -->
+                <div class="info-card intro-card">
+                    <h3><i class="fas fa-user-circle"></i> Introduction</h3>
+                    <p>
+                        Hi, I'm Ervie Obedencio, a 20-year-old aspiring developer based in the Philippines.
+                        My interest in computers started when I was 12, and that curiosity eventually grew
+                        into a passion for application development, especially in front-end design.
+                    </p>
+                    <p>
+                        I enjoy building clean, user-friendly interfaces and constantly improving my skills
+                        through hands-on projects. When I'm not coding, I spend time playing games, getting creative,
+                        and developing applications to sharpen my craft.
+                    </p>
+                </div>
+                
+                <div class="info-grid">
+                    <!-- Skills Section -->
+                    <div class="info-card">
+                        <h3><i class="fas fa-code"></i> Technical Skills</h3>
+                        <ul class="skills-list">
+                            <li>
+                                <div class="skill-header">
+                                    <span class="skill-name">HTML/CSS</span>
+                                    <span class="skill-percent">90%</span>
+                                </div>
+                                <div class="skill-bar">
+                                    <div class="skill-level" style="width: 90%;"></div>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="skill-header">
+                                    <span class="skill-name">JavaScript</span>
+                                    <span class="skill-percent">80%</span>
+                                </div>
+                                <div class="skill-bar">
+                                    <div class="skill-level" style="width: 80%;"></div>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="skill-header">
+                                    <span class="skill-name">UI/UX Design</span>
+                                    <span class="skill-percent">85%</span>
+                                </div>
+                                <div class="skill-bar">
+                                    <div class="skill-level" style="width: 85%;"></div>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="skill-header">
+                                    <span class="skill-name">Frontend Development</span>
+                                    <span class="skill-percent">75%</span>
+                                </div>
+                                <div class="skill-bar">
+                                    <div class="skill-level" style="width: 75%;"></div>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="skill-header">
+                                    <span class="skill-name">Responsive Design</span>
+                                    <span class="skill-percent">88%</span>
+                                </div>
+                                <div class="skill-bar">
+                                    <div class="skill-level" style="width: 88%;"></div>
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+                    
+                    <!-- Hobbies Section -->
+                    <div class="info-card">
+                        <h3><i class="fas fa-heart"></i> Hobbies & Interests</h3>
+                        <div class="hobbies-grid">
+                            <div class="hobby-item">
+                                <i class="fas fa-laptop-code"></i>
+                                <p>Coding</p>
+                            </div>
+                            <div class="hobby-item">
+                                <i class="fas fa-gamepad"></i>
+                                <p>Gaming</p>
+                            </div>
+                            <div class="hobby-item">
+                                <i class="fas fa-paint-brush"></i>
+                                <p>Design</p>
+                            </div>
+                            <div class="hobby-item">
+                                <i class="fas fa-music"></i>
+                                <p>Music</p>
+                            </div>
+                            <div class="hobby-item">
+                                <i class="fas fa-book"></i>
+                                <p>Reading</p>
+                            </div>
+                            <div class="hobby-item">
+                                <i class="fas fa-camera"></i>
+                                <p>Photography</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Education Background Section -->
+                <div class="info-card">
+                    <h3><i class="fas fa-graduation-cap"></i> Education Background</h3>
+                    <div class="timeline">
+                        <div class="timeline-item">
+                            <div class="timeline-year">2022 - Present</div>
+                            <div class="timeline-title">Bachelor of Science in Information Technology</div>
+                            <p>Currently in 3rd year, focusing on web development, software engineering, and user interface design. Learning advanced programming concepts, database management, and project methodologies.</p>
+                        </div>
+                        <div class="timeline-item">
+                            <div class="timeline-year">2020 - 2022</div>
+                            <div class="timeline-title">Senior High School - ICT Track</div>
+                            <p>Specialized in Information and Communication Technology. Learned programming fundamentals, computer systems, basic networking, and hardware maintenance. Participated in coding competitions and tech workshops.</p>
+                        </div>
+                        <div class="timeline-item">
+                            <div class="timeline-year">2016 - 2020</div>
+                            <div class="timeline-title">Junior High School</div>
+                            <p>Developed interest in computers and technology. Joined computer clubs and workshops. Started exploring basic programming concepts, web design, and digital arts. Won awards in school tech competitions.</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Additional Skills -->
+                <div class="info-grid">
+                    <div class="info-card">
+                        <h3><i class="fas fa-tools"></i> Tools & Technologies</h3>
+                        <ul class="skills-list simple-list">
+                            <li><i class="fas fa-check-circle"></i> Visual Studio Code</li>
+                            <li><i class="fas fa-check-circle"></i> Git & GitHub</li>
+                            <li><i class="fas fa-check-circle"></i> Figma</li>
+                            <li><i class="fas fa-check-circle"></i> Adobe Photoshop</li>
+                            <li><i class="fas fa-check-circle"></i> Chrome DevTools</li>
+                            <li><i class="fas fa-check-circle"></i> Command Line</li>
+                        </ul>
+                    </div>
+                    
+                    <div class="info-card">
+                        <h3><i class="fas fa-star"></i> Soft Skills</h3>
+                        <ul class="skills-list simple-list">
+                            <li><i class="fas fa-check-circle"></i> Problem Solving</li>
+                            <li><i class="fas fa-check-circle"></i> Team Collaboration</li>
+                            <li><i class="fas fa-check-circle"></i> Time Management</li>
+                            <li><i class="fas fa-check-circle"></i> Communication</li>
+                            <li><i class="fas fa-check-circle"></i> Creativity</li>
+                            <li><i class="fas fa-check-circle"></i> Adaptability</li>
+                        </ul>
+                    </div>
+                </div>
+                
+                <!-- Future Goals -->
+                <div class="info-card">
+                    <h3><i class="fas fa-bullseye"></i> Future Goals</h3>
+                    <p>
+                        My goal is to become a full-stack developer with expertise in creating seamless user experiences.
+                        I'm currently learning modern frameworks like React and Vue.js, and I plan to expand my knowledge
+                        in backend development with Node.js and databases.
+                    </p>
+                    <p>
+                        In the next few years, I aim to work on meaningful projects that solve real-world problems,
+                        contribute to open-source communities, and continuously grow as a developer. I believe in
+                        lifelong learning and staying updated with the latest technologies and best practices.
+                    </p>
+                </div>
+                
+                <!-- Back to top button -->
+                <div class="back-to-top-container">
+                    <button class="back-to-top" onclick="scrollToTop()">
+                        <i class="fas fa-arrow-up"></i> Back to Top
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
 
-        <h1>About Me</h1>
-        <p>
-            I am 20 years old and I'm currently a 3rd Year IT student from USTP.
-            I enjoy creating minimalist interfaces and experimenting with new upcoming technologies.
-        </p>
+</section>
 
 
-    </section>
-
-
-    <!-- CONTACT -->
-    <section id="contact" class="page">
+<!-- CONTACT -->
+<section id="contact" class="page">
 
     <div class="background-image">
-        <!-- 👉 Put your design image here -->
         <img src="images/background.png" alt="Background Design">
     </div>
 
-        <h1>Contact</h1>
-        <p>Email: obedencioervie@gmail.com</p>
-        <p>Facebook: Ervie Obedencio</p>
-        <p>GitHub: github.com/ervie</p>
-    </section>
+    <div class="hero">
+        <div class="hero-text">
+            <h1>Have a <span>Project?</span></h1>
+
+            <p>Contact me thru these platforms:</p>
+
+            <p>Email: <span>obedencioervie@gmail.com</span></p>
+            <p>Github: <span>github.com/ervie</span></p>
+            <p>Instagram: <span>@ervieobedencio</span></p>
+        </div>
+    </div>
+
+</section>
 
 </main>
 
@@ -101,10 +309,50 @@
 <!-- JAVASCRIPT -->
 <script>
 function showSection(sectionId) {
+    // Hide all sections
     let sections = document.querySelectorAll('.page');
     sections.forEach(section => section.classList.remove('active'));
+    
+    // Show the selected section
     document.getElementById(sectionId).classList.add('active');
+    
+    // If showing about page, scroll to top
+    if (sectionId === 'about') {
+        document.querySelector('.about-content-wrapper').scrollTop = 0;
+    }
+    
+    // Update active menu item
+    updateActiveMenu(sectionId);
 }
+
+// Optional function to highlight active menu item
+function updateActiveMenu(sectionId) {
+    // Remove active class from all menu items
+    const menuItems = document.querySelectorAll('nav a');
+    menuItems.forEach(item => item.classList.remove('active'));
+    
+    // Add active class to the corresponding menu item
+    if (sectionId === 'home') {
+        document.querySelector('nav a[onclick*="home"]').classList.add('active');
+    } else if (sectionId === 'about') {
+        document.querySelector('nav a[onclick*="about"]').classList.add('active');
+    } else if (sectionId === 'contact') {
+        document.querySelector('nav a[onclick*="contact"]').classList.add('active');
+    }
+}
+
+// Scroll to top function
+function scrollToTop() {
+    document.querySelector('.about-content-wrapper').scrollTo({
+        top: 0,
+        behavior: 'smooth'
+    });
+}
+
+// Initialize active menu on page load
+document.addEventListener('DOMContentLoaded', function() {
+    updateActiveMenu('home');
+});
 </script>
 
 </body>
