@@ -347,21 +347,30 @@ document.addEventListener('DOMContentLoaded', function() {
     const aboutWrapper = document.querySelector('.about-content-wrapper');
     const backToTopBtn = document.querySelector('.back-to-top');
 
-    // Hide button initially
     backToTopBtn.style.display = 'none';
 
-    // Show button only when scrolled
-    aboutWrapper.addEventListener('scroll', function() {
-        if (aboutWrapper.scrollTop > 200) {
+    function checkScroll() {
+        const wrapperScroll = aboutWrapper.scrollTop;
+        const windowScroll = window.scrollY;
+
+        if (wrapperScroll > 200 || windowScroll > 200) {
             backToTopBtn.style.display = 'inline-block';
         } else {
             backToTopBtn.style.display = 'none';
         }
-    });
+    }
 
-    // Smooth scroll to top
+    // Listen to BOTH
+    aboutWrapper.addEventListener('scroll', checkScroll);
+    window.addEventListener('scroll', checkScroll);
+
     backToTopBtn.addEventListener('click', function() {
         aboutWrapper.scrollTo({
+            top: 0,
+            behavior: 'smooth'
+        });
+
+        window.scrollTo({
             top: 0,
             behavior: 'smooth'
         });
