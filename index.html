@@ -341,17 +341,32 @@ function updateActiveMenu(sectionId) {
     }
 }
 
-// Scroll to top function
-function scrollToTop() {
-    document.querySelector('.about-content-wrapper').scrollTo({
-        top: 0,
-        behavior: 'smooth'
-    });
-}
 
-// Initialize active menu on page load
 document.addEventListener('DOMContentLoaded', function() {
-    updateActiveMenu('home');
+
+    const aboutWrapper = document.querySelector('.about-content-wrapper');
+    const backToTopBtn = document.querySelector('.back-to-top');
+
+    // Hide button initially
+    backToTopBtn.style.display = 'none';
+
+    // Show button only when scrolled
+    aboutWrapper.addEventListener('scroll', function() {
+        if (aboutWrapper.scrollTop > 200) {
+            backToTopBtn.style.display = 'inline-block';
+        } else {
+            backToTopBtn.style.display = 'none';
+        }
+    });
+
+    // Smooth scroll to top
+    backToTopBtn.addEventListener('click', function() {
+        aboutWrapper.scrollTo({
+            top: 0,
+            behavior: 'smooth'
+        });
+    });
+
 });
 </script>
 
