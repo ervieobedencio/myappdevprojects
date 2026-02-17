@@ -14,6 +14,7 @@ body {
     display: flex;
     overflow-x: hidden;
     line-height: 1.5;
+    width: 100%;
 }
 
 img {
@@ -114,6 +115,7 @@ nav a.active {
     min-height: 100vh;
     padding: 2rem 3rem;
     position: relative;
+    width: 100%;
 }
 
 .page.active {
@@ -175,6 +177,14 @@ nav a.active {
     padding: 3rem 3rem;
     border: 4px solid black;
     box-shadow: 16px 16px 0 #f5d300, 16px 16px 0 4px #000;
+    width: 100%;
+    word-wrap: break-word;
+    overflow-wrap: break-word;
+}
+
+.hero-text {
+    max-width: 480px;
+    width: 100%;
 }
 
 .hero-text h1 {
@@ -186,6 +196,8 @@ nav a.active {
     background: linear-gradient(145deg, #0026ff, #d600aa);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
+    word-wrap: break-word;
+    overflow-wrap: break-word;
 }
 
 .hero-text span {
@@ -196,6 +208,8 @@ nav a.active {
     border-radius: 40px;
     display: inline-block;
     transform: rotate(-2deg);
+    word-wrap: break-word;
+    max-width: 100%;
 }
 
 .hero-text p {
@@ -208,6 +222,9 @@ nav a.active {
     box-shadow: 6px 6px 0 #aaff00;
     margin: 2rem 0;
     color: #1a1a1a;
+    word-wrap: break-word;
+    overflow-wrap: break-word;
+    width: 100%;
 }
 
 button {
@@ -222,6 +239,7 @@ button {
     cursor: pointer;
     transition: 0.1s linear;
     color: black;
+    max-width: 100%;
 }
 
 button:hover {
@@ -239,6 +257,7 @@ button:hover {
     box-shadow: 20px 20px 0 #fa00b6, 20px 20px 0 5px black;
     rotate: 2deg;
     transition: 0.3s;
+    max-width: 100%;
 }
 
 .hero-image img:hover {
@@ -290,6 +309,7 @@ button:hover {
     border-radius: 50px;
     border: 4px solid black;
     box-shadow: 14px 14px 0 #21ffb3, 14px 14px 0 4px black;
+    width: 100%;
 }
 
 .profile-image-large {
@@ -305,6 +325,7 @@ button:hover {
     padding: 1.6rem;
     border-radius: 30px;
     border: 3px solid black;
+    width: 100%;
 }
 
 .info-item {
@@ -314,12 +335,19 @@ button:hover {
     gap: 12px;
     border-bottom: 2px dashed #aaa;
     padding: 12px 0;
+    word-wrap: break-word;
+    overflow-wrap: break-word;
 }
 
 .info-item i {
     color: #d62976;
     font-size: 1.8rem;
     width: 36px;
+    flex-shrink: 0;
+}
+
+.info-item span {
+    flex-shrink: 0;
 }
 
 /* =========================
@@ -327,6 +355,7 @@ button:hover {
 ========================= */
 .about-right {
     flex: 3 1 500px;
+    width: 100%;
 }
 
 .section-title {
@@ -341,6 +370,8 @@ button:hover {
     box-shadow: 12px 12px 0 #f4ff52;
     margin-bottom: 2rem;
     letter-spacing: -0.5px;
+    max-width: 100%;
+    word-wrap: break-word;
 }
 
 .info-card {
@@ -352,6 +383,9 @@ button:hover {
     margin-bottom: 2rem;
     box-shadow: 10px 10px 0 #b300ff, 10px 10px 0 4px black;
     transition: 0.2s;
+    width: 100%;
+    word-wrap: break-word;
+    overflow-wrap: break-word;
 }
 
 .info-card:hover {
@@ -367,6 +401,11 @@ button:hover {
     display: flex;
     align-items: center;
     gap: 12px;
+    word-wrap: break-word;
+}
+
+.info-card h3 i {
+    flex-shrink: 0;
 }
 
 .info-grid {
@@ -391,6 +430,8 @@ button:hover {
     display: flex;
     justify-content: space-between;
     font-size: 1.2rem;
+    flex-wrap: wrap;
+    gap: 8px;
 }
 
 .skill-bar {
@@ -427,12 +468,17 @@ button:hover {
     font-weight: bold;
     box-shadow: 6px 6px 0 #0011ff;
     transition: 0.1s;
+    word-wrap: break-word;
 }
 
 .hobby-item i {
     font-size: 2.2rem;
     display: block;
     color: black;
+}
+
+.hobby-item p {
+    word-wrap: break-word;
 }
 
 /* =========================
@@ -443,6 +489,7 @@ button:hover {
     padding-left: 2rem;
     margin: 2rem 0;
     position: relative;
+    word-wrap: break-word;
 }
 
 .timeline-year {
@@ -453,6 +500,8 @@ button:hover {
     border-radius: 60px;
     font-weight: 800;
     border: 3px solid #ffea00;
+    max-width: 100%;
+    word-wrap: break-word;
 }
 
 /* =========================
@@ -462,11 +511,16 @@ button:hover {
     list-style: none;
     font-size: 1.2rem;
     padding: 0.5rem 0;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    word-wrap: break-word;
 }
 
 .simple-list i {
     color: #ff0080;
     margin-right: 0.8rem;
+    flex-shrink: 0;
 }
 
 /* =========================
@@ -484,6 +538,8 @@ button:hover {
     border-radius: 80px;
     padding: 1rem 2.2rem;
     box-shadow: 6px 6px 0 #ff7575;
+    max-width: 100%;
+    word-wrap: break-word;
 }
 
 /* =========================
@@ -493,6 +549,12 @@ button:hover {
     flex-direction: column;
     text-align: center;
     background: #d2f7ff;
+    width: 100%;
+}
+
+#contact .hero-text {
+    width: 100%;
+    max-width: 100%;
 }
 
 #contact .hero-text p {
@@ -502,14 +564,20 @@ button:hover {
     padding: 1rem 2rem;
     border-radius: 60px;
     box-shadow: 8px 8px 0 #ff77aa;
+    width: 100%;
+    word-wrap: break-word;
+    overflow-wrap: break-word;
+    margin: 1rem 0;
 }
 
 /* =========================
-   MOBILE RESPONSIVE
+   MOBILE RESPONSIVE - FIXED!
 ========================= */
 @media (max-width: 768px) {
     body {
         flex-direction: column;
+        width: 100%;
+        overflow-x: hidden;
     }
 
     .sidebar {
@@ -530,9 +598,10 @@ button:hover {
     }
 
     .sidebar a {
-        font-size: 1.4rem;
+        font-size: 1.2rem;
         padding: 8px 16px;
         width: auto;
+        min-width: 80px;
     }
 
     .content {
@@ -541,29 +610,190 @@ button:hover {
     }
 
     .page {
-        padding: 1.5rem 1rem;
+        padding: 1rem;
+        width: 100%;
+        overflow-x: hidden;
     }
 
+    /* FIXED HERO SECTION */
     .hero {
-        padding: 2rem 1.5rem;
-        box-shadow: 10px 10px 0 #f5d300, 10px 10px 0 4px #000;
+        padding: 1.5rem;
+        box-shadow: 8px 8px 0 #f5d300, 8px 8px 0 4px #000;
+        gap: 1.5rem;
+        width: 100%;
+        border-width: 3px;
+    }
+
+    .hero-text {
+        width: 100%;
+        max-width: 100%;
+    }
+
+    .hero-text h1 {
+        font-size: 2.5rem;
+        word-break: break-word;
+    }
+
+    .hero-text p {
+        font-size: 1rem;
+        padding: 0.8rem 1.2rem;
+        margin: 1rem 0;
+        word-break: break-word;
+    }
+
+    .hero-text span {
+        font-size: inherit;
+        padding: 0 4px;
+        border-width: 2px;
+    }
+
+    button {
+        font-size: 1.2rem;
+        padding: 0.8rem 1.5rem;
+        width: auto;
+        max-width: 100%;
     }
 
     .hero-image img {
-        width: 200px;
-        height: 200px;
+        width: 180px;
+        height: 180px;
+        box-shadow: 12px 12px 0 #fa00b6, 12px 12px 0 4px black;
     }
 
+    /* FIXED CONTACT SECTION */
+    #contact .hero-text p {
+        font-size: 1.2rem;
+        padding: 0.8rem 1rem;
+        word-break: break-word;
+        width: 100%;
+        box-sizing: border-box;
+    }
+
+    #contact .hero {
+        padding: 1.5rem 1rem;
+    }
+
+    /* FIXED ABOUT SECTION */
     .section-title {
-        font-size: 3rem;
+        font-size: 2.5rem;
+        padding: 0.2rem 1rem;
+        word-break: break-word;
+        max-width: 100%;
     }
 
     .info-card {
+        padding: 1.2rem;
+        border-radius: 36px;
+        box-shadow: 6px 6px 0 #b300ff, 6px 6px 0 3px black;
+    }
+
+    .info-card h3 {
+        font-size: 1.5rem;
+        flex-wrap: wrap;
+    }
+
+    .info-card p {
+        font-size: 0.95rem;
+        word-break: break-word;
+    }
+
+    .about-left {
         padding: 1.5rem;
+        box-shadow: 8px 8px 0 #21ffb3, 8px 8px 0 3px black;
+    }
+
+    .personal-info {
+        padding: 1rem;
+    }
+
+    .info-item {
+        font-size: 0.95rem;
+        gap: 8px;
+    }
+
+    .info-item i {
+        font-size: 1.2rem;
+        width: 24px;
+    }
+
+    .hobbies-grid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 0.8rem;
+    }
+
+    .hobby-item {
+        padding: 0.8rem 0.3rem;
+        font-size: 0.9rem;
+    }
+
+    .hobby-item i {
+        font-size: 1.5rem;
+    }
+
+    .skill-header {
+        font-size: 0.95rem;
+    }
+
+    .simple-list li {
+        font-size: 0.95rem;
+    }
+
+    .timeline-item {
+        padding-left: 1rem;
+    }
+
+    .timeline-year {
+        font-size: 0.9rem;
+        padding: 0.3rem 1rem;
+    }
+
+    .back-to-top {
+        font-size: 1.2rem;
+        padding: 0.8rem 1.5rem;
     }
 
     .about-page .about-content-wrapper {
         max-height: none;
         overflow-y: visible;
+        padding-right: 0;
+    }
+
+    /* fix for the checkbox items in your image */
+    .simple-list li i {
+        font-size: 1rem;
+    }
+}
+
+/* Extra small devices (phones under 400px) */
+@media (max-width: 400px) {
+    .hero-text h1 {
+        font-size: 2rem;
+    }
+
+    .hero-text p {
+        font-size: 0.9rem;
+    }
+
+    .hero-image img {
+        width: 150px;
+        height: 150px;
+    }
+
+    .section-title {
+        font-size: 2rem;
+    }
+
+    .sidebar a {
+        font-size: 1rem;
+        padding: 6px 12px;
+    }
+
+    #contact .hero-text p {
+        font-size: 1rem;
+        padding: 0.6rem 0.8rem;
+    }
+
+    .info-item {
+        flex-wrap: wrap;
     }
 }
