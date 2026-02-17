@@ -1,6 +1,3 @@
-/* =========================
-   RESET + BASE STYLES
-========================= */
 * {
     margin: 0;
     padding: 0;
@@ -167,8 +164,10 @@ nav a.active {
 ========================= */
 .hero {
     display: flex;
+    flex-direction: column; /* Stack vertically */
     align-items: center;
-    justify-content: space-between;
+    justify-content: center;
+    text-align: center; /* Center text */
     gap: 3rem;
     flex-wrap: wrap;
     background: rgba(255, 255, 255, 0.5);
@@ -178,8 +177,8 @@ nav a.active {
     border: 4px solid black;
     box-shadow: 16px 16px 0 #f5d300, 16px 16px 0 4px #000;
     width: 100%;
-    word-wrap: break-word;
-    overflow-wrap: break-word;
+    margin: 0 auto;
+    max-width: 800px; /* Adjust as needed */
 }
 
 .hero-text {
